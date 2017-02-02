@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Hangman
 {
@@ -223,6 +224,12 @@ namespace Hangman
             character = Char.ToLower(System.Convert.ToChar(buttonZ.Text));
             List<int> charPos = StringManipulation.CheckString(character, StringManipulation.wordAsChars);
             UpdateBox(charPos, character);
+        }
+
+
+        private void buttonOpen_Click(object sender, EventArgs e)
+        {
+            FileHandling.OpenFile();
         }
         #endregion
     }

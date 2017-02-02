@@ -56,6 +56,7 @@
             this.buttonZ = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonOpen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonA
@@ -337,11 +338,22 @@
             this.textBox1.TabIndex = 27;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // buttonOpen
+            // 
+            this.buttonOpen.Location = new System.Drawing.Point(606, 138);
+            this.buttonOpen.Name = "buttonOpen";
+            this.buttonOpen.Size = new System.Drawing.Size(75, 23);
+            this.buttonOpen.TabIndex = 28;
+            this.buttonOpen.Text = "Open";
+            this.buttonOpen.UseVisualStyleBackColor = true;
+            this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 461);
+            this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonNew);
             this.Controls.Add(this.buttonZ);
@@ -407,6 +419,7 @@
         private System.Windows.Forms.Button buttonZ;
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonOpen;
     }
 }
 

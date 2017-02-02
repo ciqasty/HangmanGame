@@ -15,8 +15,18 @@ namespace Hangman
 
         public static void NewWord()
         {
-            word = "abcdefg";
-            wordAsChars = word.ToCharArray();
+            Random rand = new Random();
+            try
+            {
+                word = FileHandling.words[rand.Next(0, FileHandling.words.Count)];
+                wordAsChars = word.ToCharArray();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("There were an error with the file, check if it is not empty", "Error", MessageBoxButtons.OK);
+            }
+            
         }
 
         public static List<int> CheckString(char ch, char[] w)
